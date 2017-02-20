@@ -24,4 +24,6 @@ catalog.url = "http://<proxy-address>:8080"
 ```
 Where <proxy-address> should be replaced with real proxy address (IP of machine, where docker-compose has been launched).
 
-That's all. To improve custom logic of filtering you can modify [site/index.php](site/index.php) file.
+That's all.
+To manage a 'while list' filter just edit [site/index.php](site/index.php) and adjust a list of extensions.
+To get a full list of extensions you can use https://ext.plesk.com/api/v4/packages
