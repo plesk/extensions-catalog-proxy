@@ -1,6 +1,6 @@
 <?php
 
-$data = json_decode(file_get_contents('https://ext.plesk.com' . $_SERVER['PATH_INFO']));
+$data = json_decode(file_get_contents('https://ext.plesk.com' . $_SERVER['PATH_INFO'] . (!empty($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : '')));
 
 if (preg_match('|^/api/v\d+/packages(\?.*)?$|', $_SERVER['PATH_INFO'])) {
     $data = array_values(array_filter($data, function($item) {
